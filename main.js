@@ -20,6 +20,7 @@ var api_1 = "http://ip-api.com/json";
   state = obj.regionName;
 
 
+
 var api = "http://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&appid=e5e62079a2fcfa4112afa14c181597e1";
   $.getJSON(api, function(data){
 
@@ -27,9 +28,14 @@ var api = "http://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" 
     tempF = Math.round(1.8*(kel - 273) + 32);
     tempC = Math.round((5/9)*(tempF - 32));
 
+    setInterval(function(){
+      $("#iconW").html("<img src='http://openweathermap.org/img/w/" + data.weather[0].icon + ".png' alt='Icon depicting current weather.'>");
+    }, 2000);
+
     $("#tempC").html(tempC);
     $("#temp").html(tempF + "&deg;F");
     $("#loc").html(city +"<br>" +state);
+
 
     console.log(api);
     console.log(api_1);
@@ -54,3 +60,17 @@ var api = "http://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" 
       }
     });
 });
+
+(function () {
+
+  var time = document.getElementById( "clock" );
+
+  function updateClock ( data ) {
+    clock.innerHTML = new Date().toLocaleTimeString();
+  }
+
+  setInterval(function () {
+      updateClock( time );
+  }, 1000);
+
+}());

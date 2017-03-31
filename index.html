@@ -4,27 +4,28 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Crappy Weather</title>
-    <!-- Bootstrap -->
+    <title>Weather</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Codystar" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="main.css">
   </head>
   <body>
     <div class="app text-center">
-      <div class="circle">
-        <span id="iconW"></span>
-        <div class="temp">
-          <h1><span id="temp">?</span></h1>
-        </div>
-        <div class="button">
-          <button type="button" class="btn-sm" id="cToF">C/F</button>
-        </div>
-        <div class="loc">
-          <span id="loc"></span>
+      <div class="circle ball">
+        <div class="container-fluid innercircle ts">
+          <span id="clock"></span>
+          <div class="temp">
+            <h1><span id="iconW"></span><span id="temp">?</span></h1>
+          </div>
+          <div class="CFbutton">
+            <button type="button" class="cTf ts bs" id="cToF">C / F</button>
+          </div>
+          <div class="loc">
+            <span id="loc"></span>
+          </div>
         </div>
       </div>
     </div>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/Users/Hal/Desktop/weather_app/main.js"></script>
