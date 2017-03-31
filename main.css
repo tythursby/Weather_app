@@ -1,7 +1,21 @@
+html {
+  background: url(images/14.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -webkit-font-smoothing: subpixel-antialiased;
+
+}
+
+
 body{
   line-height: 1;
   margin-top: 0;
   padding: 0;
+  background: none;
+
+
 }
 
 button {
@@ -11,6 +25,7 @@ button {
   outline: none;
   margin-top: 15px;
   margin-bottom: 15px;
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 button:active {
   border-radius: 15px;
@@ -25,17 +40,22 @@ button:hover {
 
 .app{
   width: 50%;
-  margin-left: 25%;
+  padding-top: 15px;
   margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 25%;
   font-family: 'Codystar';
   color: red;
-  display: block;
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+
 }
 
 .circle {
   position: relative;
   width: 100%;
-  height: 0;
+  height: auto;
   padding: 50% 0;
   border-radius: 50%;
   background: black;
@@ -109,6 +129,7 @@ button:hover {
   .innercircle{
     font-size: 1.75em;
   }
+
 }
 
 @media (max-width: 760px){
@@ -121,6 +142,9 @@ button:hover {
 }
 
 @media (max-width: 650px){
+  .app {
+    margin-bottom: 20%;
+  }
   .circle{
     box-shadow: inset 5px 0px 50px white, 10px 10px 30px rgba(0,0,0,0.6), inset 100px -50px 50px rgba(0,0,0,0.8);
   }
@@ -149,5 +173,20 @@ button:hover {
   button{
     margin-top: 3px;
     margin-bottom: 3px;
+  }
+}
+@media (max-width:360px){
+  .app{
+    width: 100%;
+    margin:0;
+  }
+  .innercircle{
+    font-size: 1em;
+    margin:0;
+    padding:0;
+  }
+  button{
+    margin: 0;
+    margin-top: -10px;
   }
 }

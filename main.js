@@ -74,3 +74,17 @@ var api = "http://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" 
   }, 1000);
 
 }());
+
+var element = $('.app'), windowWidth, x;
+
+$(window).resize(function () {
+  if ($(window).width() < 600) {
+    windowWidth = $(window).width();
+    x = (windowWidth - 599) * 1;
+    element.css('margin-bottom', 15 - x);
+  } else {
+    element.css('margin-bottom', 15)
+  }
+});
+
+$(window).trigger('resize');
